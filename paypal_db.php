@@ -2,9 +2,9 @@
 	$dblocal = 1;
 	
 	if ($dblocal<=1){
-	$host = "localhost";
-	$user = "carymedicine";
-	$password = "zSh3e3&0";
+	$host = "dummylocalhost";
+	$user = "dummycarymedicine";
+	$password = "dummyzSh3e3&0";
 	$db = "carymedicine";
 	
 	} else{
