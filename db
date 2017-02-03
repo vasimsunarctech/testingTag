@@ -10,9 +10,9 @@
 	
 	} else{
 		$host = "localhost";
-		$user = "pukhraj";
-		$password = "pukhraj123";
-		$db = "harendar";
+		$user = "yuvraj";
+		$password = "yuvraj";
+		$db = "yuvraj";
 	
 	}
 	$con = @mysqli_connect("$host","$user","$password","$db");
