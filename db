@@ -1,0 +1,46 @@
+<?php
+	
+	$dblocal = 1;
+	
+	if ($dblocal<=1){
+	$host = "68.178.216.190";
+	$user = "carymedicine";
+	$password = "Ss5db$08";
+	$db = "carymedicine";
+	
+	} else{
+		$host = "localhost";
+		$user = "pukhraj";
+		$password = "pukhraj123";
+		$db = "harendar";
+	
+	}
+	$con = @mysqli_connect("$host","$user","$password","$db");
+	// Check connection
+	if (mysqli_connect_errno())
+  	{
+  		echo ".." . mysqli_connect_error();
+  	}
+	else
+		{
+			echo ".". "<br>";
+		}
+		
+	$sql = "INSERT INTO
+			paypalinfo(fname,lname, ack, address1, city, state, zip, email, pan, pn, amount ) VALUES ('$request[BILLTOFIRSTNAME]', '$request[BILLTOLASTNAME]', '$response[RESPMSG]', '$request[SHIPTOSTREET]', '$request[SHIPTOCITY]', '$request[SHIPTOSTATE]', '$request[SHIPTOZIP]', '$request[EMAIL]', '$request[PAN]', '$request[PN]', '$request[AMOUNT]' )
+			"; 
+
+	// Execute query
+	if (@mysqli_query($con,$sql))
+	  {
+  		echo ".";
+ 	 }
+	else
+  	{
+  		echo "." . @mysqli_error($con);
+  	}
+
+	@mysqli_close($con);
+?>
+
+
